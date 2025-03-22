@@ -24,10 +24,9 @@ Think about which debugging methods you found most useful and how you might appl
 // Description:
 // This program is intended to display a simple prompt in the console but fails to run.
 
-console.log("Welcome to the bootcamp
+console.log("Welcome to the bootcamp"); //
 
-// What’s Wrong?
-
+// What’s Wrong? Syntax error. The code was missing a closing parenthesis, semi-colon at the end of the closing parenthesis, and quotation mark at the end of the closing parenthesis.
 
 // Program B
 // Description:
@@ -35,26 +34,26 @@ console.log("Welcome to the bootcamp
 
 let numbers = [2, 4, "eight"];
 for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] === "eight") {
+    numbers[i] = 8;
+  }
   let doubled = numbers[i] * 2;
   console.log(doubled);
 }
 
-// What’s Wrong?
-
-
+// What’s Wrong? Runtime error. The values in the array is a string. Strings do not compute to integers when the code is executed, so you have to add logic in the code to check for the string value eight and convert it to a number.
 
 // Program C (Logic Error)
 // Description:
 // This snippet of code is supposed to check if a given number is prime (i.e., divisible only by 1 and itself). However, it incorrectly marks some numbers as prime or not prime.
 
 function isPrime(num) {
-  if (num < 2) return false;
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
-      return true;  // Supposed to indicate num is NOT prime
+      return false; //Suppose to indicate that a number is NOT prime.
     }
   }
-  return false; // Supposed to indicate num IS prime
+  return true; //Suppose to indicate that the number is prime.
 }
 
 console.log(isPrime(7)); // Expected true but gets false
