@@ -58,4 +58,4 @@ function isPrime(num) {
 
 console.log(isPrime(7)); // Expected true but gets false
 
-// What’s Wrong?
+// What’s Wrong? Logic error. Numbers divisible by i are not considered prime, so you should return that the value is false in the if statement instead of true. The second return value should be converted to true to indicate that numbers not divisible by i are prime.
